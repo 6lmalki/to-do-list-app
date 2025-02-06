@@ -1,0 +1,31 @@
+.to-do {
+  background-color: #4c4c4c;
+  height: 3rem;
+}
+
+.to-do .to-do-number {
+  border: 1px solid #8b8b8b;
+  color: darkgray;
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 0.8rem;
+}
+
+.to-do .to-do-task {
+  color: #ffffff;
+}
+
+.to-do .to-do-actions {
+  color: #46ff46;
+  width: 85px;
+}
+
+.to-do .to-do-actions .action:hover {
+  cursor: pointer;
+  color: #ffff00;
+}
+
+.to-do .completed {
+  color: gray !important;
+  text-decoration: line-through;
+}
