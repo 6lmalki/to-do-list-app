@@ -105,7 +105,7 @@ export function ToDoList() {
   return (
     <Container className="to-do-list">
       <h1 className="mt-5 text-white text-center">To-Do List App</h1>
-      <Form className="mt-5 mb-3 d-flex">
+      <Form className="mt-4 mb-3 d-flex">
         <Form.Control
           type="text"
           value={task}
@@ -138,21 +138,23 @@ export function ToDoList() {
           </>
         )}
       </Form>
-      {toDoList.length > 0 ? (
-        toDoList.map((toDo) => (
-          <ToDo
-            key={toDo.id}
-            id={toDo.id}
-            task={toDo.task}
-            completed={toDo.completed}
-            handleCompleteClick={() => handleCompleteClick(toDo.id)}
-            handleEditClick={() => handleEditClick(toDo.id, toDo.task)}
-            handleDeleteClick={() => handleDeleteClick(toDo.id)}
-          />
-        ))
-      ) : (
-        <p className="mt-4 text-white text-center">No tasks...</p>
-      )}
+      <div className="to-do-list-items">
+        {toDoList.length > 0 ? (
+          toDoList.map((toDo) => (
+            <ToDo
+              key={toDo.id}
+              id={toDo.id}
+              task={toDo.task}
+              completed={toDo.completed}
+              handleCompleteClick={() => handleCompleteClick(toDo.id)}
+              handleEditClick={() => handleEditClick(toDo.id, toDo.task)}
+              handleDeleteClick={() => handleDeleteClick(toDo.id)}
+            />
+          ))
+        ) : (
+          <p className="mt-4 text-white text-center">No tasks...</p>
+        )}
+      </div>
     </Container>
   );
 }

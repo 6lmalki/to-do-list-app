@@ -5,3 +5,7 @@
 .to-do-list Button {
   width: 6.5rem;
 }
+
+.to-do-list .to-do-list-items {
+  margin-bottom: 70px;
+}
